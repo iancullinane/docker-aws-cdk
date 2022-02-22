@@ -3,7 +3,7 @@ ARG NODE_VERSION=7.15.1
 FROM alpine:3.13
 
 RUN apk -v --no-cache --update add \
-  nodejs=${NODE_VERSIN} \
+  nodejs@${NODE_VERSION} \
   npm \
   ca-certificates \
   bash \
