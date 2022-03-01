@@ -1,9 +1,10 @@
-ARG AWS_CDK_VERSION=2.13.0
-ARG NODE_VERSION=7.15.1
+ARG AWS_CDK_VERSION=2.14.0
+ARG NPM_VERSION=7.15.1
+ARG NODE_VERSION=16.13.2-r1
 FROM alpine:3.13
 
 RUN apk -v --no-cache --update add \
-  nodejs@${NODE_VERSION} \
+  nodejs \
   npm \
   ca-certificates \
   bash \
@@ -18,3 +19,4 @@ VOLUME [ "/opt/app" ]
 WORKDIR /opt/app
 
 CMD ["cdk", "--version"]
+# docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/opt/app eignhpants/docker-aws-cdk:latest cdk synth && cdk deploy
