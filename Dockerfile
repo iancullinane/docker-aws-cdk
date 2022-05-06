@@ -12,7 +12,7 @@ RUN apk -v --no-cache --update add \
   && \
   update-ca-certificates && \
   npm install -g aws-cdk@${AWS_CDK_VERSION} \
-  npm install -g typescript \
+  npm install -g typescript 
   
 
 VOLUME [ "/root/.aws" ]
