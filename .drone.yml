@@ -13,8 +13,8 @@ steps:
     settings:
       repo: eignhpants/docker-aws-cdk
       username:
-        from_secret: dh_user_name
+        from_secret: dh-username
       password:
-        from_secret: dh_pw
+        from_secret: dh-pw
     publish:
       image: eignhpants/docker-aws-cdk
